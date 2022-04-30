@@ -35,6 +35,7 @@ RSpec.describe Client, type: :model do
     end
 
     it 'CPF class String' do
+      # lembrar fazer o test utilizando let
       client = create(:client)
       expect(client.cpf).to be_instance_of(String)
     end
