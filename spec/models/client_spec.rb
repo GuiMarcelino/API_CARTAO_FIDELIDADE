@@ -28,13 +28,14 @@ RSpec.describe Client, type: :model do
     it { is_expected.to allow_value(nil).for(:age) }
   end
 
-  context 'Classes corretas' do
+  context 'Validando atributos para classe esperada' do
     it 'Age class Integer' do
       client = create(:client)
       expect(client.age).to be_instance_of(Integer)
     end
 
     it 'CPF class String' do
+      # lembrar fazer o test utilizando let
       client = create(:client)
       expect(client.cpf).to be_instance_of(String)
     end
